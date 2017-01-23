@@ -14,7 +14,7 @@ Citizen.CreateThread(function()
 		if IsControlJustReleased(0, 51) then	
 			
 			if(IsPedInAnyVehicle(GetPlayerPed(-1), false))then
-				if(selectedVehicle[myPlayer] ~= nil)then
+				if(selectedVehicle[myPlayer] == nil)then
 					TriggerServerEvent("pulloverCanceled")
 					ShowNotification("Pullover cancelled.")
 					
