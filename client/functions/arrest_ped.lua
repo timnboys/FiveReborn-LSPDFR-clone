@@ -114,10 +114,8 @@ AddEventHandler("releasePed", function(ent)
 	ClearPedTasksImmediately(tonumber(ent))
 	TaskPlayAnim(tonumber(ent), "random@arrests@busted","idle_a", 8, -4, 100, 0.1, 0, false, false, true)
 	
-	if(selectedVehicle[myPlayer] ~= nil)then
+	if(selectedVehicle[myPlayer] == nil)then
 		TriggerServerEvent("pulloverCanceled")
-	else
-		
 	end
 	
 end)
