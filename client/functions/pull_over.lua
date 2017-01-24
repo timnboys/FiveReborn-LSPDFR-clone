@@ -27,17 +27,20 @@ Citizen.CreateThread(function()
 					if(IsVehicleSeatFree(closest, -1) == false)then
 						pulledOver = false
 						pulledOverPed = nil
-						if(closest ~= nil and closest ~= false)then
+					else
+					pulledOver = true
+					pulledOverPed = closest
+					end					
+						if(closest = not nil and closest = not false)then
 							TriggerServerEvent("selectedVehicle")
 							ShowNotification("Vehicle selected, press L-SHIFT to pullover or E to cancel pullover.")
 						end
 					else
 					end
-				end
 			end
 		end
 		if IsControlJustReleased(0, 21)then
-			if(selectedVehicle[myPlayer] ~= nil)then
+			if(selectedVehicle[myPlayer] = not nil)then
 				
 				if(IsPedInAnyVehicle(GetPlayerPed(-1), false))then
 					if(pulledOver == true)then
