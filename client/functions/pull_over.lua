@@ -28,8 +28,8 @@ Citizen.CreateThread(function()
 					if(IsVehicleSeatFree(closest, -1) == false) then
 						pulledOver = false
 						pulledOverPed = nil
-					--else
-					--pulledOver = true
+					else
+					pulledOver = true
 					--pulledOverPed = pedselected
 					end					
 						if(closest = not nil and closest = not false)then
