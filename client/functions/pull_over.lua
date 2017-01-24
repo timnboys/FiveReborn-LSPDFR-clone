@@ -24,12 +24,13 @@ Citizen.CreateThread(function()
 				else
 					local pc = GetEntityCoords(GetPlayerPed(-1))
 					local closest = GetClosestVehicle(pc['x'], pc['y'], pc['z'], 20.0, 0, 70)
-					if(IsVehicleSeatFree(closest, -1) == false)then
+					--local pedselected = GetPedInVehicleSeat(closest, -1)
+					if(IsVehicleSeatFree(closest, -1) == false) then
 						pulledOver = false
 						pulledOverPed = nil
-					else
-					pulledOver = true
-					pulledOverPed = closest
+					--else
+					--pulledOver = true
+					--pulledOverPed = pedselected
 					end					
 						if(closest = not nil and closest = not false)then
 							TriggerServerEvent("selectedVehicle")
