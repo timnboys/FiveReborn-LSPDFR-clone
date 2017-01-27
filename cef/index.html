@@ -19,21 +19,21 @@
 				if(move_vehicle == true){
 					// Move vehicle
 					if(keyCode == 38)
-						$.post('http://cop/move', JSON.stringify({direction:"forward"}))
+						$.post('http://cop/move', JSON.stringify({message:"direction:"forward""}))
 					else if(keyCode == 39)
-						$.post('http://cop/move', JSON.stringify({direction:"right"}))
+						$.post('http://cop/move', JSON.stringify({message:"direction:"right""}))
 					else if(keyCode == 40)
-						$.post('http://cop/move', JSON.stringify({direction:"backward"}))
+						$.post('http://cop/move', JSON.stringify({message:"direction:"backward""}))
 					else if(keyCode == 37)
-						$.post('http://cop/move', JSON.stringify({direction:"left"}))
+						$.post('http://cop/move', JSON.stringify({message:"direction:"left""}))
 					else if(keyCode == 16){
 						$.post('http://cop/close', JSON.stringify({message:"Manual movement mode exited."}))
 						move_vehicle = false
 					}
 					else if(keyCode == 219)
-						$.post('http://cop/move', JSON.stringify({direction:"rotate", amount: 2}))
+						$.post('http://cop/move', JSON.stringify({message:"direction:"rotate", amount: 2"}))
 					else if(keyCode == 221)
-						$.post('http://cop/move', JSON.stringify({direction:"rotate", amount: -2}))
+						$.post('http://cop/move', JSON.stringify({message:"direction:"rotate", amount: -2"}))
 				}else if(ped_options == true){
 					if(keyCode == 38){
 						// Up
